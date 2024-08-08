@@ -1,0 +1,67 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    background-color: darkgray;
+}
+.box
+{
+    animation: sunset 5s ease infinite;
+    margin-top: 70px;
+    margin-left: 335px;
+    width: 50%;
+    height: 500px;
+    background-color: blue;
+    border-radius: 50px;
+    position: relative; /* Add this to make .box a positioning context */
+}
+.ball
+{
+    animation: bouncing 5s ease none infinite ;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 119, 0);
+    position: relative ;
+    top: 25%;
+    border-radius: 50px;
+    left: 0;
+}
+.water
+{
+    position: absolute; /* Add this for absolute positioning */
+    bottom: 0; /* Aligns the .water element at the bottom of the .box */
+    animation: water 5s ease infinite ;
+    width: 100%;
+    height: 35%;
+    background-color: lightblue;
+    border-radius: 50px;
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+}
+@keyframes bouncing
+{
+    0% { top: 25%; }
+    50% { top: 50%; 
+    background-color: rgb(138, 169, 196);}
+    100% { top: 25%; }
+}
+@keyframes sunset
+{
+    0% { background-color: rgb(223, 191, 111); }
+    50% { background-color: rgb(3, 3, 6); }
+    100% { background-color: goldenrod; } 
+}
+@keyframes water {
+    0% { 
+        background-color: #1e90ff;
+    }
+    50% { 
+        background-color: #0c1d4d;
+        height: 40%;
+    }
+    100% { 
+        background-color: #1e90ff;
+    }
+}
